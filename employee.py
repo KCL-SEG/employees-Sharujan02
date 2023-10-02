@@ -29,10 +29,10 @@ class Employee:
 
     def __str__(self):
         if self.salary_type == 'monthly':
-            str = f"{self.name} works on a {self.salary_type} salary of {self.salary_amount}.  Their total pay is {self.salary_amount}."
+            str = f"{self.name} works on a {self.salary_type} salary of {self.salary_amount}.  Their total pay is {self.get_pay()}."
         elif self.salary_type == 'contract':
             pay_per_hour = self.getContractPPHours()
-            str = f"{self.name} works on a {self.salary_type} of {self.getContractHours()} hours at {pay_per_hour}/hour.  Their total pay is {self.salary_amount}."
+            str = f"{self.name} works on a {self.salary_type} of {self.getContractHours()} hours at {pay_per_hour}/hour.  Their total pay is {self.get_pay()}."
 
         return str
     
